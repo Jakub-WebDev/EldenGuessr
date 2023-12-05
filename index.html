@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EldenGuessr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+    <div id="start-screen">
+        <h1 id="title">ELDEN GUESSR</h1>
+        <h2 id="instructions">HOW TO PLAY</h2>
+        <p id="instructions">click start button</p>
+        <p id="instructions">you will have ten seconds to look at the photo</p>
+        <p id="instructions">after ten seconds you will have to indicate the location of the photo on the map</p>
+        <p id="instructions">you will get two points for a correct answer and one point for a close guess.</p>
+        <button id="start-button" onclick="startGame()">Start Game</button>
+    </div> 
+    <div id="question-container"  style="display: none;"> 
+        <div id="timer-container">
+            <div id="timer-text">10</div>
+            <div id="timer-bar">
+              <div id="timer-progress"></div>
+            </div>
+          </div>
+        
+        <img id="question-img" src="" alt="question Image">
+    </div>
+    <div>
+        <div id="map-container" style="display: none;">
+            <img id="map-img" src="map.jpg" onclick="checkLocation(event)">
+         </div>
+    </div>
+
+    <div id="score-container" style="display: none;">
+        <p id="final-message"></p>
+        <p id="score-display">Your total score is: <span id="score-value">0</span> points out of 10</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
